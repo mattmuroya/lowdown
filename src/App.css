@@ -1,0 +1,11 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.input textarea,
+.preview div {
+  width: 600px;
+  height: 400px;
+  border: black solid 1px;
+}
