@@ -1,23 +1,30 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { marked } from "marked";
 
 import "./App.css";
 
 function App() {
+  // const [input, setInput] = useState("");
   const [preview, setPreview] = useState("");
 
-  const updatePreview = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-    setPreview(marked.parse(e.target.value));
+  const ref: any = useRef();
+
+  useEffect(() => {
+    ref.current?.focus();
+  }, []);
+
+  const handleInput = () => {
+    // setInput(ref.current?.innerText);
+    // console.log(ref.current?.innerText);
+    setPreview(marked.parse(ref.current?.innerText));
   };
 
   return (
     <div className="App">
-      <div className="input">
-        <textarea onChange={(e) => updatePreview(e)} />
-      </div>
-      <div className="preview">
-        <div dangerouslySetInnerHTML={{ __html: preview }} />
-      </div>
+      <pre className="input" ref={ref} contentEditable onInput={handleInput}>
+        {/* {input} */}
+      </pre>
+      <div className="preview" dangerouslySetInnerHTML={{ __html: preview }} />
     </div>
   );
 }

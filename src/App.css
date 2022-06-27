@@ -1,11 +1,55 @@
 * {
-  margin: 0;
-  padding: 0;
+  box-sizing: border-box;
 }
 
-.input textarea,
-.preview div {
-  width: 600px;
-  height: 400px;
-  border: black solid 1px;
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 22px;
 }
+
+.App {
+  /* min-width: 800px; */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.input,
+.preview {
+  padding: 42px;
+  flex: 1 1 0;
+  overflow-wrap: anywhere;
+  /* width: 100%; */
+  height: 100vh;
+}
+
+.input {
+  margin: 0;
+  background-color: #333;
+  color: #fff;
+  /* counter-reset: line; */
+}
+
+.input[contenteditable] {
+  outline: none;
+}
+
+.preview :first-child {
+  margin-top: 0;
+}
+
+/* @media screen and (max-width: 400px) {
+  .App {
+    flex-direction: column;
+  }
+
+  .input,
+  .preview {
+    width: 100%;
+    height: 50vh;
+  }
+} */
