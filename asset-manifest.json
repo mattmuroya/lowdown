@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/lowdown/static/css/main.036ca8b7.css",
+    "main.js": "/lowdown/static/js/main.8248e8f5.js",
+    "index.html": "/lowdown/index.html",
+    "main.036ca8b7.css.map": "/lowdown/static/css/main.036ca8b7.css.map",
+    "main.8248e8f5.js.map": "/lowdown/static/js/main.8248e8f5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.036ca8b7.css",
+    "static/js/main.8248e8f5.js"
+  ]
+}
